@@ -25,6 +25,7 @@ As this repo is for personal usage, the scripts only pull and deploy the tracked
 - `.config/i3/scripts/*` : scripts used while using i3.
 - `.config/polybar/*` : configuration files for polybar.
 - `.config/picom/picom.conf` : configuration file for picom.
+- `.config/kitty/kitty.conf` : configuration file for kitty.
 
 # System Information
 
