@@ -28,8 +28,8 @@ As this repo is for personal usage, the scripts only pull and deploy the tracked
 
 # Tracked files
 
-- nvidia_optimus : personal script to exec arguments under nvidia card - for nvidia hybrid systems
-- .zshrc : configuration file for zsh
+- `nvidia_optimus` : personal script to exec arguments under nvidia card - for nvidia hybrid systems
+- `.zshrc` : configuration file for zsh
 
 
 
