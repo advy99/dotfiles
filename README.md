@@ -15,6 +15,13 @@ The `bin` folder is a folder with two simple scripts:
 
 As this repo is for personal usage, the scripts only pull and deploy the tracked files.
 
+# Tracked files
+
+- `nvidia_optimus` : personal script to exec arguments under nvidia card - for nvidia hybrid systems
+- `.zshrc` : configuration file for zsh
+
+
+
 # System Information
 
 - OS: Arch Linux
@@ -24,12 +31,5 @@ As this repo is for personal usage, the scripts only pull and deploy the tracked
 - Terminal: kitty
 - Terminal Font: Roboto Mono
 - Compositor: Picom
-
-
-# Tracked files
-
-- `nvidia_optimus` : personal script to exec arguments under nvidia card - for nvidia hybrid systems
-- `.zshrc` : configuration file for zsh
-
 
 
