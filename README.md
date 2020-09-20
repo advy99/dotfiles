@@ -19,6 +19,7 @@ As this repo is for personal usage, the scripts only pull and deploy the tracked
 
 - `nvidia_optimus` : personal script to exec arguments under nvidia card - for nvidia hybrid systems
 - `.zshrc` : configuration file for zsh
+- `.vimrc` : configuration file for Vim
 
 
 
