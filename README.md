@@ -14,3 +14,10 @@ Here are the dotfiles I use for my personal system.
 - Compositor: Picom
 
 
+# Tracked files
+
+- nvidia_optimus : personal script to exec arguments under nvidia card - for nvidia hybrid systems
+- .zshrc : configuration file for zsh
+
+
+
