@@ -2,6 +2,18 @@
 
 Here are the dotfiles I use for my personal system.
 
+# Repository structure
+
+In this repo you can find my dotfiles as if the repo root is ~ in my personal system, except for the (not yet here) `bin` folder.
+
+# bin folder
+
+The `bin` folder is a folder with two simple scripts:
+
+- `deploy.sh`: Deploy the dotfiles in this repo to the system.
+- `pull.sh`: Pull the dotfiles of the system in this repo.
+
+As this repo is for personal usage, the scripts only pull and deploy the tracked files.
 
 # System Information
 
