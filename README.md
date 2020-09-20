@@ -18,6 +18,7 @@ As this repo is for personal usage, the scripts only pull and deploy the tracked
 # Tracked files
 
 - `nvidia_optimus` : personal script to exec arguments under nvidia card - for nvidia hybrid systems.
+- `atom-packages` : txt file with the atom packages i used in Atom (just in case i return to Atom).
 - `.zshrc` : configuration file for zsh.
 - `.vimrc` : configuration file for Vim.
 - `.config/i3/config` : configuration file for i3.
