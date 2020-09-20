@@ -1,6 +1,6 @@
 #!/bin/sh
 
-printf "Deploying dotfiles:\n\n"
+printf "Deploying dotfiles to the system:\n\n"
 
 for line in $(cat tracked_files.txt)
 do
