@@ -1,0 +1,7 @@
+/usr/bin/nvidia_optimus
+~/.zshrc
+~/.vimrc
+~/.config/i3/
+~/.config/polybar/
+~/.config/kitty/
+~/.config/rofi/
