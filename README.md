@@ -24,6 +24,7 @@ As this repo is for personal usage, the scripts only pull and deploy the tracked
 - `.config/i3/launchscripts/*` : scripts used by i3 when is launched.
 - `.config/i3/scripts/*` : scripts used while using i3.
 - `.config/polybar/*` : configuration files for polybar.
+- `.config/picom/picom.conf` : configuration file for picom.
 
 # System Information
 
