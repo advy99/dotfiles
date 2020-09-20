@@ -2,6 +2,21 @@
 
 printf "Pulling dotfiles from the system to this repo:\n\n"
 
+printf "This action will override your dotfiles in this repo, are you sure?[y/n]: "
+read answer
+
+while [ "$answer" != "n" ] && [ "$answer" != "y" ]; do
+	printf "You need to answer 'y' or 'n': "
+	read answer
+done
+
+
+if [ "$answer" = "n" ]; then
+	printf "\nExiting without touching anything\n"
+	exit 1
+fi
+
+
 # for all files in tracked_files
 for line in $(cat tracked_files.txt)
 do

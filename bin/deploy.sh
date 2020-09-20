@@ -2,6 +2,20 @@
 
 printf "Deploying dotfiles to the system:\n\n"
 
+printf "This action will override your actual dotfiles, are you sure?[y/n]: "
+read answer
+
+while [ "$answer" != "n" ] && [ "$answer" != "y" ]; do
+	printf "You need to answer 'y' or 'n': "
+	read answer
+done
+
+
+if [ "$answer" = "n" ]; then
+	printf "\nExiting without touching anything\n"
+	exit 1
+fi
+
 for line in $(cat tracked_files.txt)
 do
 
