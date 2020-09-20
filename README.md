@@ -26,6 +26,7 @@ As this repo is for personal usage, the scripts only pull and deploy the tracked
 - `.config/polybar/*` : configuration files for polybar.
 - `.config/picom/picom.conf` : configuration file for picom.
 - `.config/kitty/kitty.conf` : configuration file for kitty.
+- `.config/rofi/*` : configuration files for rofi.
 
 # System Information
 
