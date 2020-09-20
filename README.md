@@ -21,7 +21,8 @@ As this repo is for personal usage, the scripts only pull and deploy the tracked
 - `.zshrc` : configuration file for zsh
 - `.vimrc` : configuration file for Vim
 - `.config/i3/config` : configuration file for i3
-
+- `.config/i3/launchscripts/*` : scripts used by i3 when is launched.
+- `.config/i3/scripts/*` : scripts used while using i3
 
 # System Information
 
