@@ -81,7 +81,7 @@ let g:airline_right_alt_sep   = ''
 let g:airline_powerline_fonts = 1
 let g:airline_detect_paste    = 1
 
-let g:airline_theme='onedark'
+let g:airline_theme='quantum'
 
 " Extensions
 let g:airline#extensions#whitespace#enabled = 0
@@ -114,12 +114,13 @@ let g:ale_linters = {'c': ['gcc'],
 \                 }
 
 " Formatting options
+let g:ale_change_sign_column_color = 1
 let g:ale_sign_error         = ' ●'
 let g:ale_sign_warning       = ' ●'
 
 
-hi ALEErrorSign guifg=#ee6060 guibg=#1b1d22
-hi ALEWarningSign guifg=#de9959
+" hi ALEErrorSign guifg=#ee6060 guibg=#1b1d22
+" hi ALEWarningSign guifg=#de9959
 
 " C specific options
 let g:ale_c_gcc_options      = '-std=c11 -Wall -Wpedantic -Wextra -Wfloat-equal -Iinclude'
@@ -183,6 +184,7 @@ Plug 'joshdick/onedark.vim'
 "let g:quantum_italics=1
 
 Plug 'hzchirs/vim-material'
+Plug 'tyrannicaltoucan/vim-quantum'
 
 
 "Plug 'drewtempelmeyer/palenight.vim'
@@ -380,7 +382,8 @@ if has('nvim') || has('termguicolors')
 endif
 
 set background=dark
-colorscheme onedark
+let g:quantum_black=1
+colorscheme quantum
 
 " Show tab characters with low opacity (~20%) comment colour
 "Alternative tab character: »
