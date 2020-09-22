@@ -124,11 +124,11 @@ let g:ale_sign_warning       = ' ●'
 " hi ALEWarningSign guifg=#de9959
 
 " C specific options
-let g:ale_c_gcc_options      = '-std=c11 -Wall -Wpedantic -Wextra -Wfloat-equal -Iinclude'
+let g:ale_c_cc_options       = '-std=c11 -Wall -Wpedantic -Wextra -Wfloat-equal -Iinclude'
 let g:ale_c_parse_makefile   = 1
 
 " C++ specific options
-let g:ale_cpp_gcc_options    = '-std=c++17 -Wall -Wpedantic -Wextra -Wfloat-equal -Iinclude'
+let g:ale_cpp_cc_options     = '-std=c++17 -Wall -Wpedantic -Wextra -Wfloat-equal -Iinclude'
 let g:ale_cpp_parse_makefile = 1
 
 "let g:ale_change_sign_column_color = 1
