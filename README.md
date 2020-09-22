@@ -8,11 +8,13 @@ In this repo you can find my dotfiles as if the repo root is ~ in my personal sy
 
 # bin folder
 
-The `bin` folder is a folder with two simple scripts and a txt file:
+The `bin` folder is a folder with three simple scripts and two txt file:
 
 - `deploy.sh`: Deploy the dotfiles in this repo to the system.
 - `pull.sh`: Pull the dotfiles of the system in this repo.
+- `install.sh` : Install packages from packages.txt.
 - `tracked_files.txt` : Files to deploy or pull.
+- `packages.txt` : Packages to install.
 
 IMPORTANT: The script support both files or directories, but only will respect the full path of the dotfile if the path starts with "~/".
 
@@ -24,7 +26,13 @@ To use this scripts first you need to move inside `bin` folder:
 cd bin
 ```
 
-Then you execute one of the scripts. Before changing anything in your system or the dotfiles in the repo you need to confirm the action as the (your system or this repo) dotfiles will be overwrited.
+Give permissions to scripts:
+
+```sh
+chmod +x *.sh
+```
+
+Then you execute one of the scripts. For the two first scripts, before changing anything in your system or the dotfiles in the repo you need to confirm the action as the (your system or this repo) dotfiles will be overwrited.
 
 ```sh
 ./pull.sh
@@ -34,6 +42,12 @@ or
 
 ```sh
 ./deploy.sh
+```
+
+or
+
+```sh
+./install_packages.sh
 ```
 
 # Tracked files
