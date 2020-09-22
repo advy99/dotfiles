@@ -29,16 +29,23 @@ do
 		local_line=$(basename $line)
 	fi
 
-	if [ -f $line ]; then
-		printf "\tDeploying file ../$local_line in $line\n"
-		# copy to the repo
-		cp ../$local_line $line
-	elif [ -d $line ]; then
-		printf "\tDeploying directory ../$local_line in $line\n"
-		# copy with -R
-		cp -R ../$local_line/* $line
+	diff -r $line ../$local_line > /dev/null
+
+	if [ $? -eq 0 ]; then
+		printf "\t $line didn't changed since last deploy. Omitting.\n"
 	else
-		printf "\tSkipping $line, is not a file or a directory.\n"
+
+		if [ -f $line ]; then
+			printf "\tDeploying file ../$local_line in $line\n"
+			# copy to the repo
+			cp ../$local_line $line
+		elif [ -d $line ]; then
+			printf "\tDeploying directory ../$local_line in $line\n"
+			# copy with -R
+			cp -R ../$local_line/* $line
+		else
+			printf "\tSkipping $line, is not a file or a directory.\n"
+		fi
 	fi
 
 done
