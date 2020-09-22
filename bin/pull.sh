@@ -16,6 +16,7 @@ if [ "$answer" = "n" ]; then
 	exit 1
 fi
 
+printf "\n"
 
 # for all files in tracked_files
 for line in $(cat tracked_files.txt)
@@ -31,16 +32,23 @@ do
 		local_line=$(basename $line)
 	fi
 
-	if [ -f $line ]; then
-		printf "\tPulling file $line in ../$local_line\n"
-		# copy to the repo
-		cp $line ../$local_line
-	elif [ -d $line ]; then
-		printf "\tPulling directory $line in ../$local_line\n"
-		# copy with -R
-		cp -R $line/* ../$local_line
+	diff -r $line ../$local_line > /dev/null
+
+	if [ $? -eq 0 ]; then
+		printf "\t $line didn't changed since last pull. Omitting.\n"
 	else
-		printf "\tSkipping $line, is not a file or a directory.\n"
+
+		if [ -f $line ]; then
+			printf "\tPulling file $line in ../$local_line\n"
+			# copy to the repo
+			cp $line ../$local_line
+		elif [ -d $line ]; then
+			printf "\tPulling directory $line in ../$local_line\n"
+			# copy with -R
+			cp -R $line/* ../$local_line
+		else
+			printf "\tSkipping $line, is not a file or a directory.\n"
+		fi
 	fi
 
 done
