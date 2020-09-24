@@ -26,9 +26,10 @@ texlive-pstricks
 texlive-publishers
 texlive-science
 python
-steam
-steam-native-runtime
 vlc
+pulseaudio
+light
+zsh
 thunar
 xfce4-power-manager
 pavucontrol

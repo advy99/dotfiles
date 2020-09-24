@@ -32,7 +32,7 @@ do
 		local_line=$(basename $line)
 	fi
 
-	if [ -f ../$local_line ]; then
+	if [ -f ../$local_line ] || [ -d ../$local_line ]; then
 		diff -r $line ../$local_line > /dev/null
 	else
 		printf "$line does not exists in the repo.\n"
