@@ -296,7 +296,7 @@ bindsym $meta+Shift+m      exec                 ~/.config/i3/scripts/mpd.sh \
 # Lock the session with betterlockscreen
 bindsym $meta+$alt+q       exec                 betterlockscreen -l dim -t \
                                                 "$(date | sed 's/ ..:..:..//g')" \
-                                                & betterlockscreen -u "$HOME/Imágenes/wallpapers/$(ls $HOME/Imágenes/wallpapers/ | sort -R | tail -$N | head -1)"
+                                                & betterlockscreen -u "$HOME/Images/2z0acX.png"
 
 # Restart i3 in place, without terminating the session
 bindsym $meta+$alt+r       restart
@@ -346,7 +346,7 @@ bindsym $meta+$alt+t exec --no-startup-id .config/i3/scripts/touchpad_toggle.sh
 # ==============================================================================
 
 # Set a random wallpaper with Feh
-exec --no-startup-id feh --bg-fill ~/Imágenes/wallpapers/neon-city-6-2560×1440.jpg
+exec --no-startup-id feh --bg-fill ~/Images/2zOacX.png
 
 # Start every session with the preferred terminal emulator centered
 exec                 $TERMINAL
@@ -359,6 +359,10 @@ exec dex -ae i3
 exec --no-startup-id xset s off
 exec --no-startup-id xset -dpms
 exec --no-startup-id xset s noblank
+
+
+# set minimum light
+exec --no-startup-id light -Nr 5
 
 # my mouse config (8 and 9 are inverted)
 
