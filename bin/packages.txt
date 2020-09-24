@@ -1,4 +1,4 @@
-i3
+i3-gaps
 firefox
 firefox-i18n-es-es
 polybar

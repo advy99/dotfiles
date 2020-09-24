@@ -5,3 +5,4 @@
 ~/.config/polybar/
 ~/.config/kitty/
 ~/.config/rofi/
+~/.config/vivanco_mouse
