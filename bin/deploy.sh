@@ -29,10 +29,11 @@ do
 		local_line=$(basename $line)
 	fi
 
-	if [ -f $line ]; then
+	if [ -f $line ] || [ -d $line ]; then
 		diff -r $line ../$local_line > /dev/null
 	else
 		printf "$line does not exists in the system\n"
+		cat $line 2> /dev/null
 	fi
 
 	if [ $? -eq 0 ]; then
