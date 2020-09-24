@@ -32,7 +32,12 @@ do
 		local_line=$(basename $line)
 	fi
 
-	diff -r $line ../$local_line > /dev/null
+	if [ -f ../$local_line ]; then
+		diff -r $line ../$local_line > /dev/null
+	else
+		printf "$line does not exists in the repo.\n"
+	fi
+
 
 	if [ $? -eq 0 ]; then
 		printf "\t $line didn't changed since last pull. Omitting.\n"

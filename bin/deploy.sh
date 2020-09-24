@@ -29,7 +29,11 @@ do
 		local_line=$(basename $line)
 	fi
 
-	diff -r $line ../$local_line > /dev/null
+	if [ -f $line ]; then
+		diff -r $line ../$local_line > /dev/null
+	else
+		printf "$line does not exists in the system\n"
+	fi
 
 	if [ $? -eq 0 ]; then
 		printf "\t $line didn't changed since last deploy. Omitting.\n"
