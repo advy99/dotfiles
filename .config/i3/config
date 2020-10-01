@@ -33,13 +33,13 @@ set $modeswitch Mod5
 # ==============================================================================
 
 # Default file manager
-set $filemanager      kitty
+set $filemanager      xterm
 
 # Default graphical file manager
 set $filemanagergui   thunar
 
 # Default music player
-set $musicplayer      kitty ncmpcpp
+set $musicplayer      xterm ncmpcpp
 
 # Default screenshot program
 set $screenshot       scrot --freeze --quality 100
@@ -48,7 +48,7 @@ set $screenshot       scrot --freeze --quality 100
 set $screenshotdir    ~/Imágenes/"Captura de pantalla %Y%m%d-%H%M%S.png"
 
 # Default terminal emulator (i3-sensible-terminal)
-set $TERMINAL         kitty
+set $TERMINAL         xterm
 
 # ==============================================================================
 # AUTOSTART PROGRAMS
