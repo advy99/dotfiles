@@ -6,3 +6,4 @@
 ~/.config/kitty/
 ~/.config/rofi/
 ~/.config/vivanco_mouse
+~/.Xdefaults
