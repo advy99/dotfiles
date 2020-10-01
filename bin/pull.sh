@@ -35,7 +35,8 @@ do
 	if [ -f ../$local_line ] || [ -d ../$local_line ]; then
 		diff -r $line ../$local_line > /dev/null
 	else
-		printf "$line does not exists in the repo.\n"
+		printf "$local_line does not exists in the repo.\n"
+		cat $local_line 2> /dev/null
 	fi
 
 
