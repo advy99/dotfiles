@@ -1,24 +1,3 @@
-! ROFI
-
-rofi.color-enabled:         true
-rofi.color-window:          argb:dd111111, argb:0000000, argb:dd111111
-rofi.color-normal:          argb:0333333,  #aaaaaa,      argb:0333333, argb:0333333, #ffffff
-rofi.color-active:          argb:0333333,  #ffffff,      argb:0333333, argb:0333333, #ffffff
-rofi.color-urgent:          argb:0333333,  #ffadab,      argb:0333333, argb:0333333, #ff7044
-
-! OLD ROFI CONFIG
-! rofi.color-enabled:       true
-! rofi.color-window:        #ffffff, #ffffff, #333333
-! rofi.color-normal:        #ffffff, #333333, #ffffff, #268bd2, #ffffff
-! rofi.color-active:        #ffffff, #268bd2, #ffffff, #268bd2, #ffffff
-! rofi.color-urgent:        #ffffff, #c3382c, #ffffff, #c3382c, #ffffff
-
-rofi.separator-style:       solid
-rofi.font:                  Helvetica Neue Thin 40
-rofi.padding:               128
-rofi.width:                 100
-rofi.lines:                 8
-rofi.line-margin:           40
 
 ! URXVT / TERMINAL
 URxvt.geometry:             120x30
@@ -28,7 +7,7 @@ URxvt.perl-ext-common:      default,matcher
 URxvt.url-launcher:         /usr/bin/firefox
 URxvt.matcher.button:       1
 URxvt.urgentOnBell:         true
-URxvt.internalBorder:       24
+URxvt.internalBorder:       0
 URxvt.cursorBlink:          true
 
 URxvt*scrollColor:          #a8a19f
@@ -41,8 +20,8 @@ URxvt*highlightTextColor:   #9c9491
 
 ! --- special colors ---
 
-*background:    #2f2f2f
-*foreground:    #ffffff
+*background:    #252838
+*foreground:    #efefef
 
 ! --- standard colors ---
 
@@ -99,8 +78,10 @@ URxvt*highlightTextColor:   #9c9491
 XTerm.vt100.faceName:          xft:Roboto Mono:size=14
 XTerm.vt100.bellIsUrgent:      true
 XTerm.vt100.scrollBar:         false
-XTerm.vt100.scrollbar.width:   8
-XTerm.vt100.internalBorder:    16
+XTerm.vt100.scrollbar.width:   0
+XTerm.vt100.scrollBarBorder:	 0
+XTerm.vt100.iconBorderWidth:	 0
+XTerm.vt100.internalBorder:    0
 
 
 <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
