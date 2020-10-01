@@ -50,6 +50,7 @@ set wrap linebreak        " Lines break on window border
 set scrolloff=10
 set fixendofline
 set eol
+set noexpandtab
 
 " }}}1
 
