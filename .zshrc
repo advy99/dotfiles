@@ -20,8 +20,6 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen theme denysdovhan/spaceship-prompt
 #antigen theme agnoster
 
-export TERM="xterm-256color"
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=245"
 
 # Tell Antigen that you're done.
 antigen apply
