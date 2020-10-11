@@ -33,13 +33,13 @@ set $modeswitch Mod5
 # ==============================================================================
 
 # Default file manager
-set $filemanager      xterm
+set $filemanager      kitty
 
 # Default graphical file manager
 set $filemanagergui   thunar
 
 # Default music player
-set $musicplayer      xterm ncmpcpp
+set $musicplayer      kitty ncmpcpp
 
 # Default screenshot program
 set $screenshot       scrot --freeze --quality 100
@@ -48,7 +48,7 @@ set $screenshot       scrot --freeze --quality 100
 set $screenshotdir    ~/Imágenes/"Captura de pantalla %Y%m%d-%H%M%S.png"
 
 # Default terminal emulator (i3-sensible-terminal)
-set $TERMINAL         xterm
+set $TERMINAL         kitty
 
 # ==============================================================================
 # AUTOSTART PROGRAMS
@@ -364,7 +364,7 @@ exec --no-startup-id xset s noblank
 # set minimum light
 exec --no-startup-id light -Nr 5
 
-# load xterm config
+# load kitty config
 exec --no-startup-id xrdb ~/.Xdefaults
 
 # my mouse config (8 and 9 are inverted)
