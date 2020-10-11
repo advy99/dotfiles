@@ -18,6 +18,8 @@ autocmd BufWritePre * silent! undojoin | %s/\s\+$//e
 filetype plugin indent on " Required by plugins
 let mapleader = ","
 
+
+
 " }}}1
 
 " Custom filetypes {{{1
@@ -42,7 +44,6 @@ set hlsearch              " Highlight all matching strings after a search
 set number                " Show relative and current number lines
 set showcmd
 set shiftwidth=0          " Use the value of tabstop (=0)
-set softtabstop=-1        " Use the value of shiftwidth (<0)
 set splitbelow splitright " Split windows below or to the right
 set t_ut=""               " Constantly redraw vim to keep background colour
 set tabstop=3             " Hard tabs represent 3 spaces for me, not sorry
@@ -279,7 +280,6 @@ map <leader>n :NERDTreeToggle<CR>
 " Polyglot {{{2
 " -------------
 " Enable advanced syntax highlighting.
-
 Plug 'sheerun/vim-polyglot'
 
 let g:cpp_class_decl_highlight = 1
@@ -288,6 +288,7 @@ let g:cpp_member_variable_highlight = 1
 let g:cpp_posix_standard = 1
 let g:cpp_concepts_highlight = 1
 let g:cpp_experimental_template_highlight = 1
+let g:polyglot_disabled = ['autoindent']
 
 "let g:polyglot_disabled = ['tex']
 
@@ -366,6 +367,9 @@ imap <silent> <C-L> <Esc>:wincmd l<CR>
  noremap <silent> <F3>      :nohl<CR>
 inoremap <silent> <F3> <Esc>:nohl<CR>a
 
+map <C-J> :w<CR>:bnext<CR>
+map <C-K> :w<CR>:bprev<CR>
+
 " }}}2
 
 " }}}1
@@ -393,7 +397,6 @@ colorscheme quantum
 highlight SpecialKey guifg=#3F3E47
 "highlight SpecialKey guifg=#D9D9D7
 
-set softtabstop=0 noexpandtab
 
 " }}}1
 
