@@ -370,6 +370,8 @@ inoremap <silent> <F3> <Esc>:nohl<CR>a
 map <C-J> :w<CR>:bnext<CR>
 map <C-K> :w<CR>:bprev<CR>
 
+vmap <silent> <C-C> :w !xclip -i -sel c<CR><CR>
+
 " }}}2
 
 " }}}1
