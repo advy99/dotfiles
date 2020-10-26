@@ -56,9 +56,7 @@ or
 - `atom-packages` : txt file with the atom packages i used in Atom (just in case i return to Atom).
 - `.zshrc` : configuration file for zsh.
 - `.vimrc` : configuration file for Vim.
-- `.config/i3/config` : configuration file for i3.
-- `.config/i3/launchscripts/*` : scripts used by i3 when is launched.
-- `.config/i3/scripts/*` : scripts used while using i3.
+- `.config/i3/*` : configuration files for i3.
 - `.config/polybar/*` : configuration files for polybar.
 - `.config/picom/picom.conf` : configuration file for picom.
 - `.config/kitty/kitty.conf` : configuration file for kitty.
