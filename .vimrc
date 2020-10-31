@@ -367,8 +367,8 @@ imap <silent> <C-L> <Esc>:wincmd l<CR>
  noremap <silent> <F3>      :nohl<CR>
 inoremap <silent> <F3> <Esc>:nohl<CR>a
 
-map <C-J> :w<CR>:bnext<CR>
-map <C-K> :w<CR>:bprev<CR>
+map <C-J> :w<CR>:bprev<CR>
+map <C-K> :w<CR>:bnext<CR>
 
 vmap <silent> <C-C> :w !xclip -i -sel c<CR><CR>
 
