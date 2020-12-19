@@ -23,7 +23,7 @@ for line in $(cat tracked_files.txt)
 do
 
 	# if is located in local folder
-	if [[ $line == \~/* ]]; then
+	if [ "$line" = "\~/*" ]; then
 		# the name in the repo is the same except for the ~/
 		local_line=${line:2}
 		line=$HOME/$local_line
