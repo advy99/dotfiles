@@ -113,7 +113,7 @@ Plug 'dense-analysis/ale'
 " Linters specification
 let g:ale_linters = {'c': ['gcc'],
 \                    'cpp': ['g++'],
-\                    'python': ['']
+\                    'python': ['/usr/bin/env python']
 \                 }
 
 " Formatting options
@@ -122,8 +122,8 @@ let g:ale_sign_error         = ' ●'
 let g:ale_sign_warning       = ' ●'
 
 
-" hi ALEErrorSign guifg=#ee6060 guibg=#1b1d22
-" hi ALEWarningSign guifg=#de9959
+ " hi ALEErrorSign guifg=#ee6060 guibg=#1b1d22
+ " hi ALEWarningSign guifg=#de9959
 
 " C specific options
 let g:ale_c_cc_options       = '-std=c11 -Wall -Wpedantic -Wextra -Wfloat-equal -Iinclude'
@@ -172,7 +172,7 @@ let g:ale_cpp_parse_makefile = 1
 "Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 
 " Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'joshdick/onedark.vim'
+"Plug 'joshdick/onedark.vim'
 " Plug 'jdkanani/vim-material-theme'
 " Plug 'chuling/equinusocio-material.vim'
 "
@@ -182,33 +182,36 @@ Plug 'joshdick/onedark.vim'
 " let g:equinusocio_material_bracket_improved = 1
 " set fillchars+=vert:│
 
-"Plug 'tyrannicaltoucan/vim-quantum'
-"let g:quantum_black=1
+Plug 'tyrannicaltoucan/vim-quantum'
+let g:quantum_black=1
 "let g:quantum_italics=1
 
-Plug 'hzchirs/vim-material'
-Plug 'tyrannicaltoucan/vim-quantum'
+"Plug 'hzchirs/vim-material'
+"Plug 'tyrannicaltoucan/vim-quantum'
 
 
 "Plug 'drewtempelmeyer/palenight.vim'
 " Plug 'NLKNguyen/papercolor-theme'
 "
-" let g:PaperColor_Theme_Options = {
-"   \   'language': {
-"   \     'python': {
-"   \       'highlight_builtins' : 1
-"   \     },
-"   \     'cpp': {
-"   \       'highlight_standard_library': 1
-"   \     },
-"   \     'c': {
-"   \       'highlight_builtins' : 1
-"   \     }
-"   \   }
-"   \ }
+Plug 'NLKNguyen/papercolor-theme'
+let g:PaperColor_Theme_Options = {
+	\   'language': {
+	\     'python': {
+	\       'highlight_builtins' : 1
+	\     },
+	\     'cpp': {
+	\       'highlight_standard_library': 1
+	\     },
+	\     'c': {
+	\       'highlight_builtins' : 1
+	\     }
+	\   }
+	\ }
 "
 " Plug 'tyrannicaltoucan/vim-deep-space'
 
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'rakr/vim-one'
 " "
 " "
 " " Plug 'rakr/vim-two-firewatch'
@@ -221,7 +224,6 @@ Plug 'tyrannicaltoucan/vim-quantum'
 "Plug 'connorholyday/vim-snazzy'
 
 Plug 'advy99/DarkOneDark-Vim'
-
 
 "}}}2
 
@@ -367,8 +369,8 @@ imap <silent> <C-L> <Esc>:wincmd l<CR>
  noremap <silent> <F3>      :nohl<CR>
 inoremap <silent> <F3> <Esc>:nohl<CR>a
 
-map <C-J> :w<CR>:bnext<CR>
-map <C-K> :w<CR>:bprev<CR>
+map <C-J> :w<CR>:bprev<CR>
+map <C-K> :w<CR>:bnext<CR>
 
 vmap <silent> <C-C> :w !xclip -i -sel c<CR><CR>
 
@@ -389,9 +391,16 @@ if has('nvim') || has('termguicolors')
    set termguicolors
 endif
 
+"set background=light
+"let g:quantum_black=1
+"colorscheme DarkOneDark
+
+syntax on
 set background=dark
-let g:quantum_black=1
-colorscheme quantum
+colorscheme DarkOneDark
+
+set encoding=utf-8
+set fileencoding=utf-8
 
 " Show tab characters with low opacity (~20%) comment colour
 "Alternative tab character: »

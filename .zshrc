@@ -20,6 +20,8 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen theme denysdovhan/spaceship-prompt
 #antigen theme agnoster
 
+alias ":q"=exit
+alias ":q!"=poweroff
 
 # Tell Antigen that you're done.
 antigen apply

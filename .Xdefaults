@@ -1,21 +1,4 @@
 
-! URXVT / TERMINAL
-URxvt.geometry:             120x30
-URxvt.scrollBar:            false
-URxvt.font:                 xft:Input Mono:size=10
-URxvt.perl-ext-common:      default,matcher
-URxvt.url-launcher:         /usr/bin/firefox
-URxvt.matcher.button:       1
-URxvt.urgentOnBell:         true
-URxvt.internalBorder:       0
-URxvt.cursorBlink:          true
-
-URxvt*scrollColor:          #a8a19f
-URxvt*highlightColor:       #68615e
-URxvt*highlightTextColor:   #9c9491
-
-*cursorColor:               #a8a19f
-
 ! - Generated from: http://ciembor.github.io/4bit/
 
 ! --- special colors ---
@@ -75,8 +58,9 @@ URxvt*highlightTextColor:   #9c9491
 
 
 ! XTERM SETTINGS
-XTerm.vt100.faceName:          xft:Roboto Mono:size=14
-XTerm.vt100.bellIsUrgent:      true
+! XTerm.vt100.faceName:          xft:Roboto Mono:size=14
+XTerm.vt100.faceName:          xft:Roboto Mono:size=14, xft:Hack:size=14
+XTerm.vt100.bellIsUrgent:      false
 XTerm.vt100.scrollBar:         false
 XTerm.vt100.scrollbar.width:   0
 XTerm.vt100.scrollBarBorder:	 0
@@ -90,3 +74,21 @@ XTerm.vt100.translations: #override \n\
 	Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
 	Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
 
+! URXVT / TERMINAL
+URxvt.geometry:             120x30
+URxvt.scrollBar:            false
+URxvt.font:                 xft:Roboto Mono:size=14, xft:Hack:size=14
+URxvt.perl-ext-common:      default,matcher
+URxvt.url-launcher:         /usr/bin/firefox
+URxvt.matcher.button:       1
+URxvt.urgentOnBell:         true
+URxvt.internalBorder:       0
+URxvt.cursorBlink:          true
+
+URxvt*scrollColor:          #a8a19f
+URxvt*highlightColor:       #68615e
+URxvt*highlightTextColor:   #9c9491
+
+*cursorColor:               #a8a19f
+
+*.font: xft:Roboto Mono:size=10
