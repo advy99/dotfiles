@@ -1,9 +1,6 @@
-/usr/bin/nvidia_optimus
 ~/.zshrc
-~/.vimrc
-~/.config/i3/
-~/.config/polybar/
 ~/.config/kitty/
-~/.config/rofi/
-~/.config/vivanco_mouse
-~/.Xdefaults
+~/.config/doom-nvim/doom_config.lua
+~/.config/doom-nvim/doomrc.lua
+~/.config/doom-nvim/plugins.lua
+
