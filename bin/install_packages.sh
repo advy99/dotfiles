@@ -1,16 +1,18 @@
 #!/bin/sh
 
+AUR_MANAGER=paru
+
 printf "Installing packages from packages.txt\n\n"
 
 
 # If yay is found in the system
-if $(which yay &> /dev/null) ; then
-	printf "Using yay\n\n"
+if $(which $AUR_MANAGER &> /dev/null) ; then
+	printf "Using $AUR_MANAGER\n\n"
 	# update packages databases
-	yay -Sy
+	$AUR_MANAGER -Sy
 	
 	# install all the packages in the packages.txt
-	yay -Sd $(cat packages.txt)
+	$AUR_MANAGER -Sd $(cat packages.txt)
 
 
 # If yay is not found in the system but pacman is
