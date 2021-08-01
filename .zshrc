@@ -4,7 +4,6 @@ source $HOME/.antigen.zsh
 antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle git
 antigen bundle heroku
 antigen bundle pip
 antigen bundle lein
@@ -25,4 +24,6 @@ alias ":q!"=poweroff
 
 # Tell Antigen that you're done.
 antigen apply
+
+eval $(thefuck --alias)
 
