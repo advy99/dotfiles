@@ -23,7 +23,7 @@ for line in $(cat tracked_files.txt)
 do
 
 	# if is located in local folder
-	if [ "$line" = "\~/*" ]; then
+	if [[ $line == \~/* ]]; then
 		# the name in the repo is the same except for the ~/
 		local_line=${line:2}
 		line=$HOME/$local_line
@@ -43,6 +43,9 @@ do
 	if [ $? -eq 0 ]; then
 		printf "\t $line didn't changed since last pull. Omitting.\n"
 	else
+		if [ ! -d $(dirname ../$local_line) ]; then
+			mkdir -p $(dirname ../$local_line)
+		fi
 
 		if [ -f $line ]; then
 			printf "\tPulling file $line in ../$local_line\n"
