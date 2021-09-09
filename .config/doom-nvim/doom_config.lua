@@ -260,7 +260,7 @@ local doom = {
 		enable_treesitter = true,
 		-- If the comments should be italic
 		-- @default = false
-		italic_comments = false,
+		italic_comments = true,
 		-- If the telescope plugin window should be colored
 		-- @default = true
 		telescope_highlights = true,
@@ -323,7 +323,11 @@ local nvim = {
 	autocmds = {
 			au_tabs = {
 				{'BufEnter', '*', ':setlocal shiftwidth=0 tabstop=3 noexpandtab'}
+			},
+			au_tpp = {
+				{'BufEnter', '*.tpp', ':setlocal filetype=cpp'}
 			}
+
 	},
 
 	-- Set custom key bindings
@@ -340,7 +344,8 @@ local nvim = {
 	mappings = {
 		{'v', '<Tab>', ">gv"},
 		{'v', '<S-Tab>', "<gv"},
-		{'v', '<C-c>', "\"+y"}
+		{'v', '<C-c>', "\"+y"},
+		{'n', '<C-a>', ":NvimTreeToggle<enter>"},
 	},
 
 	-- Set custom commands

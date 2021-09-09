@@ -19,10 +19,16 @@ return {
 		requires = "nvim-lua/plenary.nvim",
 		config = function()
 			require("todo-comments").setup {
-			-- your configuration comes here
-			-- or leave it empty to use the default settings
-			-- refer to the configuration section below
-    	}
+				-- your configuration comes here
+				-- or leave it empty to use the default settings
+				-- refer to the configuration section below
+			}
     	end
+	},
+	{
+		'projekt0n/github-nvim-theme',
+		config = function()
+			require('github-theme').setup()
+		end
 	},
 }
