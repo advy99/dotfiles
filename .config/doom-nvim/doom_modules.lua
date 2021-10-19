@@ -1,5 +1,3 @@
-local M = {}
-M.source = debug.getinfo(1, "S").source:sub(2)
 -- doom_modules - Doom nvim module selection
 --
 -- The doom_modules controls what Doom nvim plugins modules are enabled and
@@ -12,6 +10,10 @@ M.source = debug.getinfo(1, "S").source:sub(2)
 -- will find a table of content where you will see a "Doomrc" section under the
 -- "Configuration" one. In that section you will find a comprehensive list of
 -- the available modules and all their supported flags.
+
+local M = {}
+
+M.source = debug.getinfo(1, "S").source:sub(2)
 
 M.modules = {
   ui = {
@@ -42,7 +44,7 @@ M.modules = {
     "kommentary",         -- Comments plugin
     -- "linter",          -- Asynchronous linter, see errors in your code on the fly
     "lsp",                -- Language Server Protocols
-	 "minimap",         -- Code minimap, requires github.com/wfxr/code-minimap
+    "minimap",         -- Code minimap, requires github.com/wfxr/code-minimap
     -- "ranger",          -- Ranger File Browser, requires ranger file browser
     "snippets",           -- Code snippets
     -- "symbols",         -- LSP symbols and tags
@@ -66,7 +68,7 @@ M.modules = {
     "python +lsp",     -- Python support + lsp
     -- "ruby",            -- Look ma, I love the gems!
 
-    "c",               -- Core dumped: segmentation fault
+    -- "c",               -- Core dumped: segmentation fault
     "cpp",             -- C++ support
     -- "go",              -- Hello, gopher
     -- "haskell",         -- Because Functional programming is fun, isn't it?
@@ -93,3 +95,5 @@ M.modules = {
 }
 
 return M
+
+-- vim: sw=2 sts=2 ts=2 fdm=indent noexpandtab

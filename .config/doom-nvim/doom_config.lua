@@ -1,5 +1,3 @@
-local M = {}
-M.source = debug.getinfo(1, "S").source:sub(2)
 -- doom_config - Doom Nvim user configurations file
 --
 -- This file contains the user-defined configurations for Doom nvim and consists
@@ -10,8 +8,11 @@ M.source = debug.getinfo(1, "S").source:sub(2)
 --   2. Nvim, this one defines all the custom configurations that you want to
 --      use in Neovim, e.g. a colorscheme italic_comments global variable
 
+local M = {}
+
+M.source = debug.getinfo(1, "S").source:sub(2)
+
 M.config = {
-  -- {{{ Doom
   doom = {
     -- Autosave
     -- false : Disable autosave
@@ -30,6 +31,12 @@ M.config = {
     -- true  : Disable Vim macros
     -- @default = false
     disable_macros = false,
+
+    -- Use netrw as files explorer
+    -- false : Use nvim-tree.lua
+    -- true  : Use netrw
+    -- @default = false
+    use_netrw = false,
 
     -- Autosave sessions
     -- false : Disable session autosave
@@ -108,8 +115,8 @@ M.config = {
     line_highlight = true,
 
     -- Automatically split right
-    -- false : splits right (vertically)
-    -- true  : splits left (vertically)
+    -- false : splits left (vertically)
+    -- true  : splits right (vertically)
     -- @default = true
     split_right = true,
 
@@ -218,6 +225,14 @@ M.config = {
     -- @default = false
     disable_autocommands = false,
 
+    -- Enable LSP diagnostics virtual text
+    -- @default = false
+    enable_lsp_virtual_text = false,
+
+    -- Use floating windows for plugins manager (packer) operations
+    -- @default = false
+    use_floating_win_packer = false,
+
     -- Default indent size
     -- @default = 4
     indent = 3,
@@ -325,17 +340,34 @@ M.config = {
     guifont = "Roboto Mono",
     guifont_size = "15",
 
-    -- change Which Key background color
+    -- Change Which Key background color
     -- can use hex, or normal color names (eg: Red, Gree, Blue)
     -- @default = #202328
     whichkey_bg = "#202328",
 
-    -- set your custom lsp diagnostic symbols below
+    -- Set your custom lsp diagnostic symbols below
     lsp_error = "",
-    lsp_warning = "",
+    lsp_warn = "",
     lsp_hint = "",
-    lsp_information = "",
+    lsp_info = "",
     lsp_virtual_text = " ",
+
+    -- Set your linters for the programming languages that you use,
+    -- see https://github.com/mfussenegger/nvim-lint#available-linters
+    linters = {
+      c = {},
+      cpp = {},
+      css = {},
+      html = {},
+      javascript = {},
+      lua = {},
+      markdown = {},
+      nix = {},
+      python = {},
+      ruby = {},
+      sh = {},
+      typescript = {},
+    },
 
     -- Set your dashboard custom colors below
     -- @default = doom emacs' default dashboard colors
@@ -350,9 +382,7 @@ M.config = {
     -- @default = doom emacs' default dashboard header
     dashboard_custom_header = {},
   },
-  -- }}}
 
-  -- {{{ Nvim
   nvim = {
     -- Set custom Neovim global variables
     -- @default = {}
@@ -375,7 +405,7 @@ M.config = {
     --   augroup_name = {
     --      { 'BufNewFile,BufRead', 'doom_modules.lua', 'set ft=lua'}
     --   }
-	autocmds = {
+    autocmds = {
 			au_tabs = {
 				{'BufEnter', '*', ':setlocal shiftwidth=0 tabstop=3 noexpandtab'}
 			},
@@ -383,7 +413,7 @@ M.config = {
 				{'BufEnter', '*.tpp', ':setlocal filetype=cpp'}
 			}
 
-	},
+		},
 
     -- Set custom key bindings
     -- @default = {}
@@ -398,12 +428,13 @@ M.config = {
     --     ':Lspsaga ...' is the command to be executed
     --     options is a Lua table containing the mapping options, e.g.
     --     { silent = true }, see ':h map-arguments'.
+    mappings = {},
     mappings = {
-		{'v', '<Tab>', ">gv"},
-		{'v', '<S-Tab>', "<gv"},
-		{'v', '<C-c>', "\"+y"},
-		{'n', '<C-a>', ":NvimTreeToggle<enter>"},
-	},
+			{'v', '<Tab>', ">gv"},
+			{'v', '<S-Tab>', "<gv"},
+			{'v', '<C-c>', "\"+y"},
+			{'n', '<C-a>', ":NvimTreeToggle<enter>"},
+		},
 
     -- Set custom commands
     -- @default = {}
@@ -432,13 +463,12 @@ M.config = {
     -- @default = {}
     -- example:
     --   {
-    --      { ['shiftwidth'] = 4 }
+    --      ['shiftwidth'] = 4
     --   }
     options = {},
   },
-  -- }}}
 }
 
 return M
 
--- vim: fdm=marker
+-- vim: sw=2 sts=2 ts=2 fdm=indent noexpandtab
