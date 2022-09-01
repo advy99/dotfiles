@@ -1,0 +1,6 @@
+ttf-nerd-fonts-symbols
+noto-fonts-emoji
+xclip
+neovim-git
+python-pynvim
+neovim-symlinks
