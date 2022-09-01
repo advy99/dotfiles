@@ -1,0 +1,41 @@
+extends basic
+
+snippet bf "Bold face" w
+\textbf{$0}
+endsnippet
+
+snippet 'chap(\*?)' "Chapter" br
+\chapter`!p snip.rv=match.group(1)`{$0}
+endsnippet
+
+snippet input "Input TeX file"
+\input{$0}
+endsnippet
+
+snippet it "Italics face" w
+\textit{$0}
+endsnippet
+
+snippet 'part(\*?)' "Part" br
+\part`!p snip.rv=match.group(1)`{$0}
+endsnippet
+
+snippet req "Import plainTeX package"
+\RequirePackage{$0}
+endsnippet
+
+snippet '(s*)sec(\*?)' "Section and subs" br
+`!p snip.rv="\\" + "sub"*len(match.group(1)) + "section" + match.group(2)`{$0}
+endsnippet
+
+snippet tt "Teletype face" w
+\texttt{$0}
+endsnippet
+
+snippet url "URL" w
+\url{$0}
+endsnippet
+
+snippet use "Import LaTeX package"
+\usepackage{$0}
+endsnippet

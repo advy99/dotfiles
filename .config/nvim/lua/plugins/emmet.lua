@@ -1,0 +1,17 @@
+local api = vim.api
+
+api.nvim_set_keymap("i", "<C-b><C-b>", "<plug>(emmet-expand-abbr)",         {})
+api.nvim_set_keymap("i", "<C-b>;",     "<plug>(emmet-expand-word)",         {})
+api.nvim_set_keymap("i", "<C-b>u",     "<plug>(emmet-update-tag)",          {})
+api.nvim_set_keymap("i", "<C-b>d",     "<plug>(emmet-balance-tag-inward)",  {})
+api.nvim_set_keymap("i", "<C-b>D",     "<plug>(emmet-balance-tag-outward)", {})
+api.nvim_set_keymap("i", "<C-b>n",     "<plug>(emmet-move-next)",           {})
+api.nvim_set_keymap("i", "<C-b>N",     "<plug>(emmet-move-prev)",           {})
+api.nvim_set_keymap("i", "<C-b>i",     "<plug>(emmet-image-size)",          {})
+api.nvim_set_keymap("i", "<C-b>/",     "<plug>(emmet-toggle-comment)",      {})
+api.nvim_set_keymap("i", "<C-b>j",     "<plug>(emmet-split-join-tag)",      {})
+api.nvim_set_keymap("i", "<C-b>k",     "<plug>(emmet-remove-tag)",          {})
+api.nvim_set_keymap("i", "<C-b>a",     "<plug>(emmet-anchorize-url)",       {})
+api.nvim_set_keymap("i", "<C-b>A",     "<plug>(emmet-anchorize-summary)",   {})
+api.nvim_set_keymap("i", "<C-b>m",     "<plug>(emmet-merge-lines)",         {})
+api.nvim_set_keymap("i", "<C-b>c",     "<plug>(emmet-code-pretty)",         {})
